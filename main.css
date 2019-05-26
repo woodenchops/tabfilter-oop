@@ -1,6 +1,7 @@
 body,
 html {
     background-color: #eaeaea;
+    font-family: sans-serif;
 }
 .wrap {
     display: -webkit-box;
@@ -13,7 +14,10 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+            
 }
+
+
 .item-container {
     background-color: black;
     width: 300px;
@@ -51,4 +55,13 @@ html {
 
 section {
     margin: 2rem 0;
+    box-sizing: border-box;
 }
+section * {
+    box-sizing: border-box;
+}
+
+img {
+    margin: 10px;
+}
+

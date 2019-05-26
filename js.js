@@ -52,3 +52,9 @@ var TileTab2 = new TabFilter({
     el: '.tab',
     content: '.item-container'
 });
+
+var TileTab3 = new TabFilter({
+    parentElement: '#img-wrap',
+    el: '.tab',
+    content: '.img'
+});
