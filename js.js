@@ -1,18 +1,17 @@
 function TabFilter(props) {
-    this._el = props.el;
+    this._tab = props.tab;
     this._content = props.content;
     this._props = props;
     this._parent_element = props.parentElement;
     var parentElement = document.querySelector(this._parent_element);
-    var tab = parentElement.querySelectorAll(this._el);
+    var tab = parentElement.querySelectorAll(this._tab);
     var tiles = parentElement.querySelectorAll(this._content);
     var self = this;
 
-    var init = (function () {
 
-        tab.forEach(function (tab) {
+        tab.forEach(function(tab) {
 
-            tab.addEventListener('click', function (e) {
+            tab.addEventListener('click', function(e) {
                 e.preventDefault();
                 var clickedTabAttr = tab.getAttribute('data-category');
                 tiles.forEach(function (tile) {
@@ -30,31 +29,22 @@ function TabFilter(props) {
 
         });
 
-    })();
-
-
-    return {
-        init: init
-    }
-
-
-
 }
 
 var TileTab = new TabFilter({
     parentElement: '#tile-wrap',
-    el: '.tab',
+    tab: '.tab',
     content: '.item-container'
 });
 
 var TileTab2 = new TabFilter({
     parentElement: '#tile-wrap2',
-    el: '.tab',
+    tab: '.tab',
     content: '.item-container'
 });
 
 var TileTab3 = new TabFilter({
     parentElement: '#img-wrap',
-    el: '.tab',
+    tab: '.tab',
     content: '.img'
 });
