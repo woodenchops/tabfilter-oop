@@ -14,6 +14,11 @@ function TabFilter(props) {
             tab.addEventListener('click', function(e) {
                 e.preventDefault();
                 var clickedTabAttr = tab.getAttribute('data-category');
+                var parentWrap = tab.parentNode.parentNode;
+                document.querySelectorAll('.parent-wrap').forEach(function(parent) {
+                    parent.classList.remove('active');
+                });
+                parentWrap.classList.add('active');
                 tiles.forEach(function (tile) {
                     var tileAttr = tile.getAttribute('data-category');
                     if (clickedTabAttr === 'all') {
